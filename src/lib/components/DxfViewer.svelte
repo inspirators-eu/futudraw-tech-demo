@@ -3,10 +3,10 @@
     import {DxfViewer} from 'dxf-viewer';
     import * as three from "three";
 
-    import mainFont from "../../../static/fonts/Roboto-LightItalic.ttf";
-    import aux1Font from "../../../static/fonts/NotoSansDisplay-SemiCondensedLightItalic.ttf";
-    import aux2Font from "../../../static/fonts/HanaMinA.ttf";
-    import aux3Font from "../../../static/fonts/NanumGothic-Regular.ttf";
+    import mainFont from "../../fonts/Roboto-LightItalic.ttf";
+    import aux1Font from "../../fonts/NotoSansDisplay-SemiCondensedLightItalic.ttf";
+    import aux2Font from "../../fonts/HanaMinA.ttf";
+    import aux3Font from "../../fonts/NanumGothic-Regular.ttf";
 
     export let dxf;
     let canvasWidth;
