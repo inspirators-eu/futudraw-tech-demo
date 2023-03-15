@@ -7,7 +7,6 @@
     import {App} from 'realm-web';
 
 
-    let inverterName = 'Inverter name';
     let dxf;
 
     onMount(async () => {
@@ -17,8 +16,11 @@
 
         dxf = await futuDrawUser.callFunction('compileDxf',
             {
-                dxfContent: await (await fetch('/dxf/model1.dxf')).text(),
-                dxfCommands: new DxfCmdHelper().rename('INVERTER_MODEL_MARK', inverterName, 'INVERTER').cmds // .disableBlock('INVERTER').cmds
+                dxfContent: await (await fetch('/dxf/demo.dxf')).text(),
+                dxfCommands: new DxfCmdHelper()
+                    // .rename('JAHUTUS_SISEOSAD_KW', '10kW', 'JAHUTUS_SISEOSAD')
+                    // .disableBlock('JAHUTUS_VENT_PATAREI')
+                    .cmds
             });
     })
 
@@ -27,12 +29,14 @@
 <div class="flex flex-row">
     <div class="basis-1/6 flex flex-col">
 
+        <!--
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-2/3">
                 <input bind:value={inverterName} class="border-2 border-gray-200 rounded w-full py-2 px-4"
                        type="text" placeholder="Inverter name">
             </div>
         </div>
+        -->
 
         <div class="flex justify-around mt-auto">
             <ExportButtons dxf={dxf} name={'model2'}/>

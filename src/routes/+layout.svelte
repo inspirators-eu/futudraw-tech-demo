@@ -6,7 +6,7 @@
     <main class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
         <nav class="flex items-center justify-between flex-wrap p-3">
             <div class="flex items-center flex-shrink-0 text-slate-600 mr-6">
-                <img src="/logo.png" class="h-12">
+                <img alt="logo" src="/logo.png" class="h-12">
                 <span class="ml-2 font-semibold text-2xl tracking-tight">FutuDraw</span>
             </div>
         </nav>
